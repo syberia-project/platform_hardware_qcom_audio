@@ -1243,7 +1243,8 @@ bool platform_check_and_set_playback_backend_cfg(struct audio_device* adev __unu
 }
 
 bool platform_check_and_set_capture_backend_cfg(struct audio_device* adev __unused,
-    struct audio_usecase *usecase __unused, snd_device_t snd_device)
+                                              struct audio_usecase *usecase __unused,
+                                              snd_device_t snd_device __unused)
 {
     return false;
 }
