@@ -442,6 +442,10 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_SND_MONITOR)), true)
     LOCAL_SRC_FILES += audio_extn/sndmonitor.c
 endif
 
+ifeq ($(strip $(AUDIO_DISABLE_SWAP_CHANNELS)), true)
+    LOCAL_CFLAGS += -DDISABLE_SWAP_CHANNELS
+endif
+
 LOCAL_MODULE := audio.primary.$(TARGET_BOARD_PLATFORM)
 
 LOCAL_MODULE_RELATIVE_PATH := hw
