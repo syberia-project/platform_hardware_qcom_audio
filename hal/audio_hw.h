@@ -355,6 +355,8 @@ struct stream_out {
     bool stream_config_changed;
     mix_matrix_params_t pan_scale_params;
     mix_matrix_params_t downmix_params;
+    bool set_dual_mono;
+    bool prev_card_status_offline;
 };
 
 struct stream_in {
